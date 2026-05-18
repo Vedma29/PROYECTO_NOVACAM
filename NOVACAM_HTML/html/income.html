@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Income | NovaCam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="../CSS/income.css">
+
+</head>
+
+<body>
+
+<section class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo-area">
+
+            <img src="../img/NOVACAM1.png"
+            alt="NovaCam">
+
+            <h2>
+
+                NovaCam
+
+            </h2>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+            <a href="income.html"
+            class="active">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                Ingresos
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Estadísticas
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-users"></i>
+
+                Comunidad
+
+            </a>
+
+        </nav>
+
+        <!-- PROFILE -->
+
+        <div class="sidebar-profile">
+
+            <img src="../img/NOVACAM44.webp"
+            alt="Perfil">
+
+            <div>
+
+                <h3>
+
+                    NovaGirl
+
+                </h3>
+
+                <span>
+
+                    Premium Member
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGOUT -->
+
+        <a href="logout.html"
+        class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar Sesión
+
+        </a>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <span class="mini-title">
+
+                    Finanzas NovaCam 💰
+
+                </span>
+
+                <h1>
+
+                    Gestión de Ingresos
+
+                </h1>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="top-actions">
+
+                <!-- MENU -->
+
+                <button class="menu-toggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <!-- DARK MODE -->
+
+                <button class="dark-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TOP CARDS -->
+
+        <section class="income-cards">
+
+            <!-- TOTAL -->
+
+            <div class="income-card gold">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>
+
+                    Total Mensual
+
+                </h3>
+
+                <h2 id="monthlyTotal">
+
+                    $0 COP
+
+                </h2>
+
+                <p>
+
+                    Actualizado automáticamente
+
+                </p>
+
+            </div>
+
+            <!-- BEST -->
+
+            <div class="income-card dark">
+
+                <i class="fa-solid fa-fire"></i>
+
+                <h3>
+
+                    Mejor Día
+
+                </h3>
+
+                <h2 id="bestDay">
+
+                    $0 COP
+
+                </h2>
+
+                <p>
+
+                    Ingreso más alto
+
+                </p>
+
+            </div>
+
+            <!-- DAYS -->
+
+            <div class="income-card gold">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                <h3>
+
+                    Días Registrados
+
+                </h3>
+
+                <h2 id="daysCount">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Historial registrado
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FINANCIAL GRID -->
+
+        <section class="financial-grid">
+
+            <!-- TRM -->
+
+            <div class="finance-card">
+
+                <div class="card-title">
+
+                    <h2>
+
+                        TRM del Día 🇨🇴
+
+                    </h2>
+
+                </div>
+
+                <div class="trm-box">
+
+                    <span>
+
+                        1 USD =
+
+                    </span>
+
+                    <h1 id="trmValue">
+
+                        Cargando...
+
+                    </h1>
+
+                    <p>
+
+                        Datos oficiales Colombia
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- USD -->
+
+            <div class="finance-card">
+
+                <div class="card-title">
+
+                    <h2>
+
+                        USD → COP
+
+                    </h2>
+
+                </div>
+
+                <div class="calculator">
+
+                    <input type="number"
+                    id="usdInput"
+                    placeholder="Cantidad USD">
+
+                    <button onclick="convertUSD()">
+
+                        Convertir
+
+                    </button>
+
+                    <h3 id="usdResult">
+
+                        $0 COP
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TOKEN CALCULATOR -->
+
+        <section class="finance-card">
+
+            <div class="card-title">
+
+                <h2>
+
+                    Tokens → Pesos
+
+                </h2>
+
+            </div>
+
+            <div class="token-grid">
+
+                <!-- TOKENS -->
+
+                <input type="number"
+                id="tokensInput"
+                placeholder="Cantidad de Tokens">
+
+                <!-- PLATFORM -->
+
+                <select id="platformSelect">
+
+                    <option value="0.05">
+
+                        Chaturbate (0.05 USD)
+
+                    </option>
+
+                    <option value="0.05">
+
+                        Stripchat (0.05 USD)
+
+                    </option>
+
+                    <option value="0.045">
+
+                        BongaCams (0.045 USD)
+
+                    </option>
+
+                    <option value="0.05">
+
+                        Cam4 (0.05 USD)
+
+                    </option>
+
+                    <option value="0.04">
+
+                        MyFreeCams (0.04 USD)
+
+                    </option>
+
+                </select>
+
+                <!-- BUTTON -->
+
+                <button onclick="convertTokens()">
+
+                    Calcular
+
+                </button>
+
+            </div>
+
+            <h3 id="tokenResult">
+
+                Resultado: $0 COP
+
+            </h3>
+
+        </section>
+
+        <!-- REGISTER DAILY -->
+
+        <section class="finance-card">
+
+            <div class="card-title">
+
+                <h2>
+
+                    Registrar Ingreso Diario
+
+                </h2>
+
+            </div>
+
+            <div class="daily-grid">
+
+                <!-- DATE -->
+
+                <input type="date"
+                id="dateInput">
+
+                <!-- PLATFORM -->
+
+                <select id="dailyPlatform">
+
+                    <option value="0.05">
+
+                        Chaturbate
+
+                    </option>
+
+                    <option value="0.05">
+
+                        Stripchat
+
+                    </option>
+
+                    <option value="0.045">
+
+                        BongaCams
+
+                    </option>
+
+                    <option value="0.05">
+
+                        Cam4
+
+                    </option>
+
+                    <option value="0.04">
+
+                        MyFreeCams
+
+                    </option>
+
+                </select>
+
+                <!-- TOKENS -->
+
+                <input type="number"
+                id="dailyTokens"
+                placeholder="Tokens">
+
+                <!-- BUTTON -->
+
+                <button onclick="addIncome()">
+
+                    Guardar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- TABLE -->
+
+        <section class="finance-card">
+
+            <div class="card-title">
+
+                <h2>
+
+                    Historial de Ingresos
+
+                </h2>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+
+                                Fecha
+
+                            </th>
+
+                            <th>
+
+                                Plataforma
+
+                            </th>
+
+                            <th>
+
+                                Tokens
+
+                            </th>
+
+                            <th>
+
+                                USD
+
+                            </th>
+
+                            <th>
+
+                                COP
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="incomeTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    /* DARK MODE */
+
+    const darkBtn =
+    document.querySelector(".dark-btn");
+
+    darkBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark");
+
+    });
+
+    /* MENU MOBILE */
+
+    const menuToggle =
+    document.querySelector(".menu-toggle");
+
+    const sidebar =
+    document.querySelector(".sidebar");
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.toggle("active");
+
+    });
+
+    /* TRM */
+
+    let currentTRM = 4120;
+
+    async function getTRM(){
+
+        try{
+
+            const response =
+            await fetch(
+            "https://www.datos.gov.co/resource/32sa-8pi3.json?$limit=1"
+            );
+
+            const data =
+            await response.json();
+
+            currentTRM =
+            parseFloat(data[0].valor);
+
+            document.getElementById(
+            "trmValue").innerHTML =
+
+            "$" +
+            currentTRM.toLocaleString(
+            "es-CO")
+            + " COP";
+
+        }
+
+        catch(error){
+
+            document.getElementById(
+            "trmValue").innerHTML =
+
+            "Error cargando TRM";
+        }
+    }
+
+    getTRM();
+
+    /* USD */
+
+    function convertUSD(){
+
+        let usd =
+        document.getElementById(
+        "usdInput").value;
+
+        let result =
+        usd * currentTRM;
+
+        document.getElementById(
+        "usdResult").innerHTML =
+
+        "$" +
+        result.toLocaleString(
+        "es-CO")
+        + " COP";
+    }
+
+    /* TOKENS */
+
+    function convertTokens(){
+
+        let tokens =
+        document.getElementById(
+        "tokensInput").value;
+
+        let tokenValue =
+        document.getElementById(
+        "platformSelect").value;
+
+        let usd =
+        tokens * tokenValue;
+
+        let cop =
+        usd * currentTRM;
+
+        document.getElementById(
+        "tokenResult").innerHTML =
+
+        "Resultado: $" +
+        cop.toLocaleString(
+        "es-CO")
+        + " COP";
+    }
+
+    /* TOTALS */
+
+    let totalCOP = 0;
+
+    let highestCOP = 0;
+
+    let totalDays = 0;
+
+    /* ADD INCOME */
+
+    function addIncome(){
+
+        let date =
+        document.getElementById(
+        "dateInput").value;
+
+        let platform =
+        document.getElementById(
+        "dailyPlatform");
+
+        let platformName =
+        platform.options[
+        platform.selectedIndex].text;
+
+        let tokenValue =
+        parseFloat(platform.value);
+
+        let tokens =
+        parseFloat(
+        document.getElementById(
+        "dailyTokens").value);
+
+        /* VALIDATE */
+
+        if(!date || !tokens){
+
+            alert(
+            "Completa todos los campos");
+
+            return;
+        }
+
+        /* CALCULATE */
+
+        let usd =
+        tokens * tokenValue;
+
+        let cop =
+        usd * currentTRM;
+
+        /* TABLE */
+
+        let table =
+        document.getElementById(
+        "incomeTable");
+
+        let row =
+        table.insertRow();
+
+        row.innerHTML =
+
+        `
+        <td>${date}</td>
+
+        <td>${platformName}</td>
+
+        <td>${tokens}</td>
+
+        <td>$${usd.toFixed(2)}</td>
+
+        <td>$${cop.toLocaleString("es-CO")}</td>
+        `;
+
+        /* TOTAL */
+
+        totalCOP += cop;
+
+        document.getElementById(
+        "monthlyTotal").innerHTML =
+
+        "$" +
+        totalCOP.toLocaleString(
+        "es-CO")
+        + " COP";
+
+        /* BEST */
+
+        if(cop > highestCOP){
+
+            highestCOP = cop;
+
+            document.getElementById(
+            "bestDay").innerHTML =
+
+            "$" +
+            highestCOP.toLocaleString(
+            "es-CO")
+            + " COP";
+        }
+
+        /* DAYS */
+
+        totalDays++;
+
+        document.getElementById(
+        "daysCount").innerHTML =
+
+        totalDays;
+
+        /* CLEAR */
+
+        document.getElementById(
+        "dateInput").value = "";
+
+        document.getElementById(
+        "dailyTokens").value = "";
+    }
+
+</script>
+
+</body>
+
+</html>

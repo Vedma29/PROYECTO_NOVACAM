@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Work Plans | NovaCam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="../css/workplans.css">
+
+</head>
+
+<body>
+
+<section class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo-area">
+
+            <img src="../img/logo_novacam.png"
+            alt="NovaCam">
+
+            <h2>
+
+                NovaCam
+
+            </h2>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+    <!-- PRINCIPAL -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            PRINCIPAL
+
+        </span>
+
+        <a href="dashboard.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="income.html">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Ingresos
+
+        </a>
+
+        <a href="stats.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Estadísticas
+
+        </a>
+
+    </div>
+
+    <!-- ORGANIZACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            ORGANIZACIÓN
+
+        </span>
+
+        <a href="agenda.html">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Agenda
+
+        </a>
+
+        <a href="goals.html">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            Metas
+
+        </a>
+
+        <a href="workplans.html"
+        class="active">
+
+            <i class="fa-solid fa-clipboard-list"></i>
+
+            Planes
+
+        </a>
+
+    </div>
+
+    <!-- FORMACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            FORMACIÓN
+
+        </span>
+
+        <a href="academy.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Academy
+
+        </a>
+
+        <a href="community.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            Comunidad
+
+        </a>
+
+    </div>
+
+    <!-- CUENTA -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            CUENTA
+
+        </span>
+
+        <a href="profile.html">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Configuración
+
+        </a>
+
+    </div>
+
+</nav>
+
+        <!-- PROFILE -->
+
+        <div class="sidebar-profile">
+
+            <img id="sidebarImage"
+            src="../img/profile_novacam.png"
+            alt="Perfil">
+
+            <div>
+
+                <h3 id="sidebarName">
+
+                    NovaGirl
+
+                </h3>
+
+                <span>
+
+                    Premium Member
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGOUT -->
+
+        <a href="logout.html"
+        class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar Sesión
+
+        </a>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <span class="mini-title">
+
+                    Organización Profesional ✨
+
+                </span>
+
+                <h1>
+
+                    Work Plans
+
+                </h1>
+
+            </div>
+
+            <div class="top-actions">
+
+                <!-- MENU -->
+
+                <button class="menu-toggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <!-- DARK -->
+
+                <button class="dark-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- HERO -->
+
+        <section class="plans-hero">
+
+            <div class="hero-content">
+
+                <span>
+
+                    Planea tu crecimiento
+
+                </span>
+
+                <h2>
+
+                    Organiza tus horarios, streams y metas semanales ✨
+
+                </h2>
+
+                <p>
+
+                    NovaCam Work Plans te ayuda a mantener disciplina, productividad y consistencia profesional.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ACTIVE PLAN -->
+
+        <div id="activePlanBox"
+        class="active-plan-box">
+
+        </div>
+
+        <!-- PLANS -->
+
+        <section class="plans-grid">
+
+            <!-- BEGINNER -->
+
+            <div class="plan-card">
+
+                <div class="plan-badge">
+
+                    Principiante
+
+                </div>
+
+                <h2>
+
+                    Beginner Plan
+
+                </h2>
+
+                <p>
+
+                    Ideal para comenzar con horarios saludables y organización básica.
+
+                </p>
+
+                <ul>
+
+                    <li>2h stream diario</li>
+
+                    <li>1 día descanso</li>
+
+                    <li>Objetivos semanales</li>
+
+                    <li>Rutina básica OBS</li>
+
+                </ul>
+
+                <button
+                onclick="startPlan('Beginner Plan')">
+
+                    Seleccionar
+
+                </button>
+
+            </div>
+
+            <!-- GROWTH -->
+
+            <div class="plan-card premium">
+
+                <div class="plan-badge">
+
+                    Crecimiento
+
+                </div>
+
+                <h2>
+
+                    Growth Plan
+
+                </h2>
+
+                <p>
+
+                    Diseñado para mejorar productividad y aumentar ingresos.
+
+                </p>
+
+                <ul>
+
+                    <li>4h stream diario</li>
+
+                    <li>Contenido premium</li>
+
+                    <li>Metas mensuales</li>
+
+                    <li>Organización avanzada</li>
+
+                </ul>
+
+                <button
+                onclick="startPlan('Growth Plan')">
+
+                    Seleccionar
+
+                </button>
+
+            </div>
+
+            <!-- ELITE -->
+
+            <div class="plan-card">
+
+                <div class="plan-badge">
+
+                    Elite
+
+                </div>
+
+                <h2>
+
+                    Elite Plan
+
+                </h2>
+
+                <p>
+
+                    Plan intensivo para modelos con objetivos profesionales altos.
+
+                </p>
+
+                <ul>
+
+                    <li>6h stream diario</li>
+
+                    <li>Analytics y métricas</li>
+
+                    <li>Contenido exclusivo</li>
+
+                    <li>Disciplina avanzada</li>
+
+                </ul>
+
+                <button
+                onclick="startPlan('Elite Plan')">
+
+                    Seleccionar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CUSTOM PLAN -->
+
+        <section class="custom-plan">
+
+            <div class="section-title">
+
+                <span>
+
+                    Personalizado
+
+                </span>
+
+                <h2>
+
+                    Crear Mi Plan
+
+                </h2>
+
+            </div>
+
+            <!-- FORM -->
+
+            <div class="plan-form">
+
+                <!-- PLAN NAME -->
+
+                <input type="text"
+                id="planName"
+                placeholder="Nombre del plan">
+
+                <!-- DESCRIPTION -->
+
+                <textarea
+                id="planDescription"
+                placeholder="¿Qué vas a hacer en este plan?"></textarea>
+
+                <!-- DATES -->
+
+                <div class="date-group">
+
+                    <div>
+
+                        <label>
+
+                            Inicio
+
+                        </label>
+
+                        <input type="date"
+                        id="startDate">
+
+                    </div>
+
+                    <div>
+
+                        <label>
+
+                            Final
+
+                        </label>
+
+                        <input type="date"
+                        id="endDate">
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button onclick="createCustomPlan()">
+
+                    Crear Plan
+
+                </button>
+
+            </div>
+
+            <!-- CUSTOM PLANS -->
+
+            <div class="custom-plans-container"
+            id="customPlansContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
+
+const darkBtn =
+document.querySelector(
+".dark-btn");
+
+darkBtn.addEventListener(
+"click",
+
+() => {
+
+    document.body.classList.toggle(
+    "dark");
+
+    localStorage.setItem(
+
+    "novacamDarkMode",
+
+    document.body.classList.contains(
+    "dark")
+    );
+});
+
+/* ========================= */
+/* MOBILE MENU */
+/* ========================= */
+
+const menuToggle =
+document.querySelector(
+".menu-toggle");
+
+const sidebar =
+document.querySelector(
+".sidebar");
+
+menuToggle.addEventListener(
+"click",
+
+() => {
+
+    sidebar.classList.toggle(
+    "active");
+
+});
+
+/* ========================= */
+/* ACTIVE PLAN */
+/* ========================= */
+
+let activePlan =
+
+localStorage.getItem(
+"novacamActivePlan"
+);
+
+let planStartDate =
+
+localStorage.getItem(
+"novacamPlanStart");
+
+/* ========================= */
+/* CUSTOM PLANS */
+/* ========================= */
+
+let customPlans =
+
+JSON.parse(
+localStorage.getItem(
+"novacamCustomPlans")
+)
+
+|| [];
+
+/* ========================= */
+/* START PLAN */
+/* ========================= */
+
+function startPlan(planName){
+
+    if(activePlan){
+
+        const start =
+        new Date(planStartDate);
+
+        const today =
+        new Date();
+
+        const diffTime =
+        today - start;
+
+        const diffDays =
+        Math.floor(
+
+        diffTime /
+
+        (1000 * 60 * 60 * 24)
+        );
+
+        if(diffDays < 21){
+
+            alert(
+
+            `Debes completar 21 días del plan actual.\n\nDía actual: ${diffDays}/21`
+            );
+
+            return;
+        }
+
+        else{
+
+            localStorage.removeItem(
+            "novacamActivePlan"
+            );
+
+            localStorage.removeItem(
+            "novacamPlanStart"
+            );
+        }
+    }
+
+    activePlan = planName;
+
+    planStartDate =
+    new Date();
+
+    localStorage.setItem(
+    "novacamActivePlan",
+    activePlan
+    );
+
+    localStorage.setItem(
+    "novacamPlanStart",
+    planStartDate
+    );
+
+    updatePlanStatus();
+
+    alert(
+
+    `${planName} iniciado ✨`
+    );
+}
+
+/* ========================= */
+/* PLAN STATUS */
+/* ========================= */
+
+function updatePlanStatus(){
+
+    const box =
+    document.getElementById(
+    "activePlanBox");
+
+    if(!activePlan){
+
+        box.style.display =
+        "none";
+
+        return;
+    }
+
+    box.style.display =
+    "block";
+
+    const start =
+    new Date(planStartDate);
+
+    const today =
+    new Date();
+
+    const diffTime =
+    today - start;
+
+    const diffDays =
+    Math.floor(
+
+    diffTime /
+
+    (1000 * 60 * 60 * 24)
+    );
+
+    box.innerHTML =
+
+    `
+    <h3>
+
+        Plan Activo:
+        ${activePlan}
+
+    </h3>
+
+    <p>
+
+        Día ${diffDays}/21
+
+    </p>
+    `;
+}
+
+/* ========================= */
+/* CREATE CUSTOM PLAN */
+/* ========================= */
+
+function createCustomPlan(){
+
+    const name =
+    document.getElementById(
+    "planName").value;
+
+    const description =
+    document.getElementById(
+    "planDescription").value;
+
+    const startDate =
+    document.getElementById(
+    "startDate").value;
+
+    const endDate =
+    document.getElementById(
+    "endDate").value;
+
+    if(
+
+        name === ""
+
+        ||
+
+        description === ""
+
+        ||
+
+        startDate === ""
+
+        ||
+
+        endDate === ""
+
+    ){
+
+        alert(
+        "Completa todos los campos"
+        );
+
+        return;
+    }
+
+    customPlans.push({
+
+        name,
+        description,
+        startDate,
+        endDate
+    });
+
+    localStorage.setItem(
+
+    "novacamCustomPlans",
+
+    JSON.stringify(customPlans)
+    );
+
+    renderCustomPlans();
+
+    document.getElementById(
+    "planName").value = "";
+
+    document.getElementById(
+    "planDescription").value = "";
+
+    document.getElementById(
+    "startDate").value = "";
+
+    document.getElementById(
+    "endDate").value = "";
+}
+
+/* ========================= */
+/* RENDER CUSTOM PLANS */
+/* ========================= */
+
+function renderCustomPlans(){
+
+    const container =
+    document.getElementById(
+    "customPlansContainer");
+
+    container.innerHTML = "";
+
+    customPlans.forEach((plan,index)=>{
+
+        container.innerHTML +=
+
+        `
+        <div class="custom-plan-card">
+
+            <div class="custom-plan-top">
+
+                <h3>
+
+                    ${plan.name}
+
+                </h3>
+
+                <button
+                class="delete-plan"
+
+                onclick="deleteCustomPlan(${index})">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+
+                ${plan.description}
+
+            </p>
+
+            <div class="custom-dates">
+
+                <span>
+
+                    📅 ${plan.startDate}
+
+                </span>
+
+                <span>
+
+                    ✨ ${plan.endDate}
+
+                </span>
+
+            </div>
+
+        </div>
+        `;
+    });
+}
+
+/* ========================= */
+/* DELETE PLAN */
+/* ========================= */
+
+function deleteCustomPlan(index){
+
+    customPlans.splice(index,1);
+
+    localStorage.setItem(
+
+    "novacamCustomPlans",
+
+    JSON.stringify(customPlans)
+    );
+
+    renderCustomPlans();
+}
+
+/* ========================= */
+/* LOAD */
+/* ========================= */
+
+window.onload = function(){
+
+    updatePlanStatus();
+
+    renderCustomPlans();
+
+    const savedName =
+    localStorage.getItem(
+    "novacamUser");
+
+    const savedImage =
+    localStorage.getItem(
+    "novacamProfileImage");
+
+    const darkMode =
+    localStorage.getItem(
+    "novacamDarkMode");
+
+    if(savedName){
+
+        document.getElementById(
+        "sidebarName").innerHTML =
+        savedName;
+    }
+
+    if(savedImage){
+
+        document.getElementById(
+        "sidebarImage").src =
+        savedImage;
+    }
+
+    if(darkMode === "true"){
+
+        document.body.classList.add(
+        "dark");
+    }
+}
+
+</script>
+
+</body>
+
+</html>

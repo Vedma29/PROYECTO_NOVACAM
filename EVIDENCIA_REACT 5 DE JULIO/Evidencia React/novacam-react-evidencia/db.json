@@ -1,0 +1,13 @@
+{
+  "usuarios": [
+    {
+      "usuario": "Ruby22",
+      "correo": "ruby.pirsons@gmail.com",
+      "contrasena": "123456",
+      "experiencia": "1 año",
+      "equipo": "pc",
+      "id": "3NRY5PQTCyI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

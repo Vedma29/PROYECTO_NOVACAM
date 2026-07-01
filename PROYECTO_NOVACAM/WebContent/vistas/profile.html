@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil | NovaCam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="../css/profile.css">
+
+</head>
+
+<body>
+
+<section class="profile-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo-area">
+
+            <img src="../img/logo_novacam.png"
+            alt="NovaCam">
+
+            <h2>
+
+                NovaCam
+
+            </h2>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+    <!-- PRINCIPAL -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            PRINCIPAL
+
+        </span>
+
+        <a href="dashboard.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="income.html">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Ingresos
+
+        </a>
+
+        <a href="stats.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Estadísticas
+
+        </a>
+
+    </div>
+
+    <!-- ORGANIZACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            ORGANIZACIÓN
+
+        </span>
+
+        <a href="agenda.html">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Agenda
+
+        </a>
+
+        <a href="goals.html">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            Metas
+
+        </a>
+
+        <a href="workplans.html">
+
+            <i class="fa-solid fa-clipboard-list"></i>
+
+            Planes
+
+        </a>
+
+    </div>
+
+    <!-- FORMACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            FORMACIÓN
+
+        </span>
+
+        <a href="academy.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Academy
+
+        </a>
+
+        <a href="community.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            Comunidad
+
+        </a>
+
+    </div>
+
+    <!-- CUENTA -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            CUENTA
+
+        </span>
+
+        <a href="profile.html"
+        class="active">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Configuración
+
+        </a>
+
+    </div>
+
+</nav>
+
+        <!-- PROFILE -->
+
+        <div class="sidebar-profile">
+
+            <img id="sidebarImage"
+            src="../img/profile_novacam.png"
+            alt="Perfil">
+
+            <div>
+
+                <h3 id="sidebarName">
+
+                    NovaGirl
+
+                </h3>
+
+                <span>
+
+                    Premium Member
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGOUT -->
+
+        <a href="logout.html"
+        class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar Sesión
+
+        </a>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="profile-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <span class="mini-title">
+
+                    Configuración NovaCam ✨
+
+                </span>
+
+                <h1>
+
+                    Mi Perfil
+
+                </h1>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="top-actions">
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="notification-wrapper">
+
+                    <button class="notification-btn"
+                    onclick="toggleNotifications()">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+                    <!-- DROPDOWN -->
+
+                    <div class="notification-panel"
+                    id="notificationPanel">
+
+                        <h3>
+
+                            Notificaciones
+
+                        </h3>
+
+                        <p>
+
+                            No tienes notificaciones ✨
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- DARK MODE -->
+
+                <button class="dark-btn"
+                onclick="toggleDarkMode()">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="profile-grid">
+
+            <!-- LEFT -->
+
+            <div class="profile-card">
+
+                <!-- IMAGE -->
+
+                <div class="profile-image">
+
+                    <img id="profilePreview"
+                    src="../img/profile_novacam.png"
+                    alt="Perfil">
+
+                    <!-- EDIT -->
+
+                    <label for="imageInput"
+                    class="image-edit">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </label>
+
+                </div>
+
+                <!-- INPUT -->
+
+                <input type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden>
+
+                <!-- DELETE PHOTO -->
+
+                <button class="delete-photo"
+                onclick="removePhoto()">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Eliminar Foto
+
+                </button>
+
+                <!-- INFO -->
+
+                <h2 id="profileName">
+
+                    NovaGirl
+
+                </h2>
+
+                <p>
+
+                    Modelo Premium NovaCam
+
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="settings-area">
+
+                <!-- ACCOUNT -->
+
+                <section class="settings-card">
+
+                    <!-- HEADER -->
+
+                    <div class="settings-header"
+                    onclick="toggleSection('accountSection')">
+
+                        <h2>
+
+                            Cuenta
+
+                        </h2>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                    <!-- CONTENT -->
+
+                    <div class="settings-content"
+                    id="accountSection">
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Nombre Artístico
+
+                            </label>
+
+                            <input type="text"
+                            id="username"
+                            placeholder="NovaGirl">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Correo Electrónico
+
+                            </label>
+
+                            <input type="email"
+                            placeholder="correo@novacam.com">
+
+                        </div>
+
+                        <button class="save-btn"
+                        onclick="saveProfile()">
+
+                            Guardar Cambios
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <!-- PASSWORD -->
+
+                <section class="settings-card">
+
+                    <!-- HEADER -->
+
+                    <div class="settings-header"
+                    onclick="toggleSection('passwordSection')">
+
+                        <h2>
+
+                            Seguridad
+
+                        </h2>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                    <!-- CONTENT -->
+
+                    <div class="settings-content"
+                    id="passwordSection">
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Contraseña Actual
+
+                            </label>
+
+                            <input type="password"
+                            placeholder="********">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Nueva Contraseña
+
+                            </label>
+
+                            <input type="password"
+                            placeholder="********">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Confirmar Contraseña
+
+                            </label>
+
+                            <input type="password"
+                            placeholder="********">
+
+                        </div>
+
+                        <button class="save-btn">
+
+                            Actualizar Contraseña
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <!-- PREFERENCES -->
+
+                <section class="settings-card">
+
+                    <!-- HEADER -->
+
+                    <div class="settings-header"
+                    onclick="toggleSection('preferencesSection')">
+
+                        <h2>
+
+                            Preferencias
+
+                        </h2>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                    <!-- CONTENT -->
+
+                    <div class="settings-content"
+                    id="preferencesSection">
+
+                        <!-- SWITCH -->
+
+                        <div class="preference-item">
+
+                            <span>
+
+                                Notificaciones
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <!-- SWITCH -->
+
+                        <div class="preference-item">
+
+                            <span>
+
+                                Sonidos
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <!-- SWITCH -->
+
+                        <div class="preference-item">
+
+                            <span>
+
+                                Emails
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <!-- SWITCH -->
+
+                        <div class="preference-item">
+
+                            <span>
+
+                                Modo Oscuro
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox"
+                                id="darkSwitch">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+<script>
+
+/* PROFILE */
+
+function saveProfile(){
+
+    let username =
+    document.getElementById(
+    "username").value;
+
+    if(username.trim() !== ""){
+
+        localStorage.setItem(
+        "novacamUser",
+        username);
+
+        document.getElementById(
+        "profileName").innerHTML =
+        username;
+
+        document.getElementById(
+        "sidebarName").innerHTML =
+        username;
+
+        alert(
+        "Perfil actualizado ✨");
+    }
+}
+
+/* IMAGE */
+
+document.getElementById(
+"imageInput")
+
+.addEventListener(
+"change",
+
+function(){
+
+    const file =
+    this.files[0];
+
+    if(!file) return;
+
+    const reader =
+    new FileReader();
+
+    reader.onload = function(e){
+
+        const image =
+        e.target.result;
+
+        localStorage.setItem(
+        "novacamProfileImage",
+        image);
+
+        document.getElementById(
+        "profilePreview").src =
+        image;
+
+        document.getElementById(
+        "sidebarImage").src =
+        image;
+    }
+
+    reader.readAsDataURL(file);
+});
+
+/* REMOVE PHOTO */
+
+function removePhoto(){
+
+    localStorage.removeItem(
+    "novacamProfileImage");
+
+    document.getElementById(
+    "profilePreview").src =
+
+    "../img/profile_novacam.png";
+
+    document.getElementById(
+    "sidebarImage").src =
+
+    "../img/profile_novacam.png";
+}
+
+/* DARK MODE */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle(
+    "dark");
+
+    localStorage.setItem(
+    "novacamDarkMode",
+
+    document.body.classList.contains(
+    "dark")
+    );
+
+    syncDarkSwitch();
+}
+
+/* SWITCH */
+
+function syncDarkSwitch(){
+
+    const isDark =
+    document.body.classList.contains(
+    "dark");
+
+    document.getElementById(
+    "darkSwitch").checked =
+    isDark;
+}
+
+/* DARK SWITCH */
+
+document.getElementById(
+"darkSwitch")
+
+.addEventListener(
+"change",
+
+function(){
+
+    if(this.checked){
+
+        document.body.classList.add(
+        "dark");
+
+    }
+
+    else{
+
+        document.body.classList.remove(
+        "dark");
+    }
+
+    localStorage.setItem(
+    "novacamDarkMode",
+
+    document.body.classList.contains(
+    "dark")
+    );
+});
+
+/* NOTIFICATIONS */
+
+function toggleNotifications(){
+
+    document.getElementById(
+    "notificationPanel")
+
+    .classList.toggle(
+    "active");
+}
+
+/* SECTIONS */
+
+function toggleSection(id){
+
+    document.getElementById(id)
+    .classList.toggle("active");
+}
+
+/* LOAD */
+
+window.onload = function(){
+
+    const savedName =
+    localStorage.getItem(
+    "novacamUser");
+
+    const savedImage =
+    localStorage.getItem(
+    "novacamProfileImage");
+
+    const darkMode =
+    localStorage.getItem(
+    "novacamDarkMode");
+
+    if(savedName){
+
+        document.getElementById(
+        "profileName").innerHTML =
+        savedName;
+
+        document.getElementById(
+        "sidebarName").innerHTML =
+        savedName;
+
+        document.getElementById(
+        "username").value =
+        savedName;
+    }
+
+    if(savedImage){
+
+        document.getElementById(
+        "profilePreview").src =
+        savedImage;
+
+        document.getElementById(
+        "sidebarImage").src =
+        savedImage;
+    }
+
+    if(darkMode === "true"){
+
+        document.body.classList.add(
+        "dark");
+    }
+
+    syncDarkSwitch();
+}
+
+</script>
+
+</body>
+
+</html>

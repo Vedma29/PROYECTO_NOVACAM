@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Comunidad | NovaCam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="../css/community.css">
+
+</head>
+
+<body>
+
+<section class="community-page">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <!-- LOGO -->
+
+            <div class="logo-area">
+
+                <img src="../img/logo_novacam.png"
+                alt="NovaCam">
+
+                <h2>
+
+                    NovaCam
+
+                </h2>
+
+            </div>
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <!-- PRINCIPAL -->
+
+                <div class="menu-section">
+
+                    <span class="menu-title">
+
+                        PRINCIPAL
+
+                    </span>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                    <a href="income.html">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        Ingresos
+
+                    </a>
+
+                    <a href="stats.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Estadísticas
+
+                    </a>
+
+                </div>
+
+                <!-- ORGANIZACIÓN -->
+
+                <div class="menu-section">
+
+                    <span class="menu-title">
+
+                        ORGANIZACIÓN
+
+                    </span>
+
+                    <a href="agenda.html">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        Agenda
+
+                    </a>
+
+                    <a href="goals.html">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        Metas
+
+                    </a>
+
+                    <a href="workplans.html">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Planes
+
+                    </a>
+
+                </div>
+
+                <!-- FORMACIÓN -->
+
+                <div class="menu-section">
+
+                    <span class="menu-title">
+
+                        FORMACIÓN
+
+                    </span>
+
+                    <a href="academy.html">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        Academy
+
+                    </a>
+
+                    <a href="community.html"
+                    class="active">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Comunidad
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+        <!-- PROFILE -->
+
+        <div>
+
+            <div class="sidebar-profile">
+
+                <img src="../img/profile_novacam.png"
+                alt="Perfil">
+
+                <div>
+
+                    <h3>
+
+                        NovaGirl
+
+                    </h3>
+
+                    <span>
+
+                        Premium Member ✨
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- LOGOUT -->
+
+            <a href="logout.html"
+            class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Cerrar Sesión
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+
+    <main class="community-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <span class="mini-title">
+
+                    Comunidad Interna ✨
+
+                </span>
+
+                <h1>
+
+                    Comunidad NovaCam
+
+                </h1>
+
+            </div>
+
+            <!-- DARK -->
+
+            <button class="dark-btn">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- REPORTES -->
+        <!-- ========================= -->
+
+        <section class="community-block">
+
+            <!-- HEADER -->
+
+            <div class="block-header">
+
+                <div>
+
+                    <span class="block-mini">
+
+                        ALERTAS
+
+                    </span>
+
+                    <h2>
+
+                        Reportes Activos
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- CREATE -->
+
+            <div class="report-create">
+
+                <textarea id="reportInput"
+                placeholder="Reporta una caída, bug o problema técnico..."></textarea>
+
+                <!-- ACTIONS -->
+
+                <div class="report-actions">
+
+                    <!-- IMAGE -->
+
+                    <label class="upload-btn">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        Imagen
+
+                        <input type="file"
+                        id="reportImage"
+                        hidden>
+
+                    </label>
+
+                    <!-- PREVIEW -->
+
+                    <img id="reportPreview"
+                    class="preview-image">
+
+                    <!-- BUTTON -->
+
+                    <button class="publish-btn"
+                    onclick="createReport()">
+
+                        Publicar Reporte
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- REPORTS -->
+
+            <div class="reports-list"
+            id="reportsList">
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOROS -->
+        <!-- ========================= -->
+
+        <section class="community-block">
+
+            <!-- HEADER -->
+
+            <div class="block-header">
+
+                <div>
+
+                    <span class="block-mini">
+
+                        COMUNIDAD
+
+                    </span>
+
+                    <h2>
+
+                        Foros Destacados
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+
+            <div class="forum-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                type="text"
+                id="forumSearch"
+                placeholder="Buscar foros o publicaciones..."
+                onkeyup="searchForums()">
+
+            </div>
+
+            <!-- CREATE -->
+
+            <div class="report-create">
+
+                <textarea id="forumInput"
+                placeholder="Crea un tema o comparte una experiencia..."></textarea>
+
+                <!-- ACTIONS -->
+
+                <div class="report-actions">
+
+                    <!-- IMAGE -->
+
+                    <label class="upload-btn">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        Imagen
+
+                        <input type="file"
+                        id="forumImage"
+                        hidden>
+
+                    </label>
+
+                    <!-- PREVIEW -->
+
+                    <img id="forumPreview"
+                    class="preview-image">
+
+                    <!-- BUTTON -->
+
+                    <button class="publish-btn"
+                    onclick="createForum()">
+
+                        Publicar Foro
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- FORUMS -->
+
+            <div class="forums-grid"
+            id="forumsGrid">
+
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+<script>
+
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
+
+const darkBtn =
+document.querySelector(
+".dark-btn");
+
+if(localStorage.getItem(
+"novacamDarkMode") === "true"){
+
+    document.body.classList.add(
+    "dark");
+}
+
+darkBtn.addEventListener(
+"click",
+
+() => {
+
+    document.body.classList.toggle(
+    "dark");
+
+    localStorage.setItem(
+
+    "novacamDarkMode",
+
+    document.body.classList.contains(
+    "dark")
+    );
+});
+
+/* ========================= */
+/* STORAGE */
+/* ========================= */
+
+let reports = JSON.parse(
+
+localStorage.getItem(
+"novacamReports")
+
+) || [];
+
+let forums = JSON.parse(
+
+localStorage.getItem(
+"novacamForums")
+
+) || [];
+
+/* ========================= */
+/* PREVIEW */
+/* ========================= */
+
+document.getElementById(
+"reportImage")
+
+.addEventListener(
+
+"change",
+
+function(e){
+
+    previewImage(
+    e,
+    "reportPreview");
+});
+
+document.getElementById(
+"forumImage")
+
+.addEventListener(
+
+"change",
+
+function(e){
+
+    previewImage(
+    e,
+    "forumPreview");
+});
+
+function previewImage(
+event,
+previewId){
+
+    const file =
+    event.target.files[0];
+
+    if(file){
+
+        const reader =
+        new FileReader();
+
+        reader.onload =
+        function(ev){
+
+            const preview =
+            document.getElementById(
+            previewId);
+
+            preview.src =
+            ev.target.result;
+
+            preview.style.display =
+            "block";
+        }
+
+        reader.readAsDataURL(file);
+    }
+}
+
+/* ========================= */
+/* CREATE REPORT */
+/* ========================= */
+
+function createReport(){
+
+    const text =
+    document.getElementById(
+    "reportInput").value;
+
+    const file =
+    document.getElementById(
+    "reportImage").files[0];
+
+    if(text.trim() === "") return;
+
+    if(file){
+
+        const reader =
+        new FileReader();
+
+        reader.onload =
+        function(e){
+
+            saveReport(
+            text,
+            e.target.result);
+        }
+
+        reader.readAsDataURL(file);
+    }
+
+    else{
+
+        saveReport(
+        text,
+        null);
+    }
+}
+
+/* SAVE REPORT */
+
+function saveReport(
+text,
+image){
+
+    const report = {
+
+        id:Date.now(),
+
+        text:text,
+
+        image:image,
+
+        date:new Date()
+        .toLocaleString()
+    };
+
+    reports.unshift(report);
+
+    localStorage.setItem(
+
+    "novacamReports",
+
+    JSON.stringify(reports)
+    );
+
+    document.getElementById(
+    "reportInput").value = "";
+
+    document.getElementById(
+    "reportImage").value = "";
+
+    document.getElementById(
+    "reportPreview").style.display =
+    "none";
+
+    renderReports();
+}
+
+/* ========================= */
+/* CREATE FORUM */
+/* ========================= */
+
+function createForum(){
+
+    const text =
+    document.getElementById(
+    "forumInput").value;
+
+    const file =
+    document.getElementById(
+    "forumImage").files[0];
+
+    if(text.trim() === "") return;
+
+    if(file){
+
+        const reader =
+        new FileReader();
+
+        reader.onload =
+        function(e){
+
+            saveForum(
+            text,
+            e.target.result);
+        }
+
+        reader.readAsDataURL(file);
+    }
+
+    else{
+
+        saveForum(
+        text,
+        null);
+    }
+}
+
+/* SAVE FORUM */
+
+function saveForum(
+text,
+image){
+
+    const forum = {
+
+        id:Date.now(),
+
+        text:text,
+
+        image:image,
+
+        comments:[],
+
+        date:new Date()
+        .toLocaleString()
+    };
+
+    forums.unshift(forum);
+
+    localStorage.setItem(
+
+    "novacamForums",
+
+    JSON.stringify(forums)
+    );
+
+    document.getElementById(
+    "forumInput").value = "";
+
+    document.getElementById(
+    "forumImage").value = "";
+
+    document.getElementById(
+    "forumPreview").style.display =
+    "none";
+
+    renderForums();
+}
+
+/* ========================= */
+/* COMMENTS */
+/* ========================= */
+
+function addComment(id){
+
+    const input =
+    document.getElementById(
+    `comment-${id}`);
+
+    const text =
+    input.value;
+
+    if(text.trim() === "") return;
+
+    const forum =
+    forums.find(
+    f => f.id === id
+    );
+
+    forum.comments.push(text);
+
+    localStorage.setItem(
+
+    "novacamForums",
+
+    JSON.stringify(forums)
+    );
+
+    input.value = "";
+
+    renderForums();
+}
+
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+function searchForums(){
+
+    const value =
+    document.getElementById(
+    "forumSearch")
+
+    .value
+    .toLowerCase()
+    .trim();
+
+    const cards =
+    document.querySelectorAll(
+    ".forum-card");
+
+    cards.forEach(card => {
+
+        const title =
+        card.querySelector("h3")
+        .innerText
+        .toLowerCase();
+
+        const text =
+        card.querySelector("p")
+        .innerText
+        .toLowerCase();
+
+        if(
+
+            title.includes(value)
+
+            ||
+
+            text.includes(value)
+
+        ){
+
+            card.style.display =
+            "block";
+        }
+
+        else{
+
+            card.style.display =
+            "none";
+        }
+    });
+}
+
+/* ========================= */
+/* DELETE */
+/* ========================= */
+
+function deleteReport(id){
+
+    reports = reports.filter(
+    report => report.id !== id
+    );
+
+    localStorage.setItem(
+
+    "novacamReports",
+
+    JSON.stringify(reports)
+    );
+
+    renderReports();
+}
+
+function deleteForum(id){
+
+    forums = forums.filter(
+    forum => forum.id !== id
+    );
+
+    localStorage.setItem(
+
+    "novacamForums",
+
+    JSON.stringify(forums)
+    );
+
+    renderForums();
+}
+
+/* ========================= */
+/* RENDER REPORTS */
+/* ========================= */
+
+function renderReports(){
+
+    const container =
+    document.getElementById(
+    "reportsList");
+
+    container.innerHTML = "";
+
+    reports.forEach(report => {
+
+        const article =
+        document.createElement(
+        "article");
+
+        article.className =
+        "report-card";
+
+        article.innerHTML = `
+
+        <div class="report-left">
+
+            <div class="report-icon">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    ${report.text}
+
+                </h3>
+
+                <span>
+
+                    Reportado por NovaGirl •
+                    ${report.date}
+
+                </span>
+
+                ${report.image
+                ? `<img src="${report.image}"
+                class="forum-image">`
+                : ""}
+
+            </div>
+
+        </div>
+
+        <button class="delete-post"
+        onclick="deleteReport(${report.id})">
+
+            <i class="fa-solid fa-trash"></i>
+
+        </button>
+
+        `;
+
+        container.appendChild(
+        article);
+    });
+}
+
+/* ========================= */
+/* RENDER FORUMS */
+/* ========================= */
+
+function renderForums(){
+
+    const container =
+    document.getElementById(
+    "forumsGrid");
+
+    container.innerHTML = "";
+
+    forums.forEach(forum => {
+
+        const article =
+        document.createElement(
+        "article");
+
+        article.className =
+        "forum-card";
+
+        article.innerHTML = `
+
+        <div class="forum-user">
+
+            <img src="../img/profile_novacam.png">
+
+            <div>
+
+                <h4>
+
+                    NovaGirl
+
+                </h4>
+
+                <span>
+
+                    ${forum.date}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <h3>
+
+            Foro NovaCam
+
+        </h3>
+
+        <p>
+
+            ${forum.text}
+
+        </p>
+
+        ${forum.image
+        ? `<img src="${forum.image}"
+        class="forum-image">`
+        : ""}
+
+        <div class="forum-footer">
+
+            <button>
+
+                <i class="fa-solid fa-heart"></i>
+
+                0
+
+            </button>
+
+            <button>
+
+                <i class="fa-solid fa-comment"></i>
+
+                ${forum.comments.length}
+
+            </button>
+
+            <button class="delete-post"
+            onclick="deleteForum(${forum.id})">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </div>
+
+        <!-- COMMENTS -->
+
+        <div class="comments-section">
+
+            <!-- INPUT -->
+
+            <div class="comment-input">
+
+                <input type="text"
+                id="comment-${forum.id}"
+                placeholder="Escribe un comentario...">
+
+                <button onclick="addComment(${forum.id})">
+
+                    Comentar
+
+                </button>
+
+            </div>
+
+            <!-- LIST -->
+
+            <div class="comments-list">
+
+                ${forum.comments.map(comment => `
+
+                <div class="comment-item">
+
+                    <img src="../img/profile_novacam.png">
+
+                    <div>
+
+                        <h5>
+
+                            NovaGirl
+
+                        </h5>
+
+                        <p>
+
+                            ${comment}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                `).join("")}
+
+            </div>
+
+        </div>
+
+        `;
+
+        container.appendChild(
+        article);
+    });
+}
+
+/* ========================= */
+/* LOAD */
+/* ========================= */
+
+renderReports();
+
+renderForums();
+
+</script>
+
+</body>
+
+</html>

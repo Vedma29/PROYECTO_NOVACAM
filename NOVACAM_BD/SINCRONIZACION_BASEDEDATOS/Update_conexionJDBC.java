@@ -19,17 +19,17 @@ public class Update_conexionJDBC {
             // UPDATE usuario 1
             String update1 = "UPDATE usuario " +
                     "SET experiencia = '7 años', equipo_usado = 'Logitech Brio' " +
-                    "WHERE id_usuario = 1";
+                    "WHERE id_usuario = 19";
 
             // UPDATE usuario 2
             String update2 = "UPDATE usuario " +
                     "SET experiencia = '5 años', equipo_usado = 'Sony A6400' " +
-                    "WHERE id_usuario = 2";
+                    "WHERE id_usuario = 18";
 
             // UPDATE usuario 3
             String update3 = "UPDATE usuario " +
                     "SET experiencia = '3 años', equipo_usado = 'RTX Studio Setup' " +
-                    "WHERE id_usuario = 3";
+                    "WHERE id_usuario = 17";
 
             sentencia.executeUpdate(update1);
             sentencia.executeUpdate(update2);
